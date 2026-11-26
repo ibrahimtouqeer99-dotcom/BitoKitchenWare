@@ -1,0 +1,271 @@
+
+/* General Styling */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #faf9f6;
+    color: #333;
+}
+
+
+/* Header */
+
+header {
+    background-color: white;
+    padding: 20px 8%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    color: #435b45;
+    font-size: 26px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    margin-left: 25px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #658b68;
+}
+
+
+/* Home Section */
+
+#home {
+    background-color: #e9e5d9;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+#home h2 {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+#home p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+#home a {
+    display: inline-block;
+    background-color: #435b45;
+    color: white;
+    padding: 14px 28px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+#home a:hover {
+    background-color: #304432;
+}
+
+
+/* Products Section */
+
+#products {
+    padding: 60px 8%;
+    text-align: center;
+}
+
+#products h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.section-description {
+    color: #777;
+    margin-bottom: 35px;
+}
+
+
+/* Product Container */
+
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+
+/* Product Card */
+
+.product-card {
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+
+/* Product Images */
+
+.product-images {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+}
+
+.product-images img {
+    width: 100%;
+    height: 230px;
+    object-fit: contain;
+    background-color: #f7f6f3;
+    border-radius: 8px;
+}
+
+/* Two images for Product 02 */
+
+.product-card:nth-child(2) .product-images {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.product-card:nth-child(2) .product-images img {
+    height: 230px;
+}
+
+
+/* Product Name */
+
+.product-card h3 {
+    margin: 18px 0 10px;
+    font-size: 19px;
+}
+
+
+/* Product Price */
+
+.product-card p {
+    color: #435b45;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+
+/* Product WhatsApp Button */
+
+.product-card a {
+    display: inline-block;
+    background-color: #25D366;
+    color: white;
+
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.product-card a:hover {
+    background-color: #1da851;
+}
+
+
+/* Contact Section */
+
+#contact {
+    background-color: #e9e5d9;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+#contact h2 {
+    margin-bottom: 15px;
+}
+
+#contact p {
+    margin-bottom: 25px;
+}
+
+.contact-button {
+    display: inline-block;
+    background-color: #25D366;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+
+/* Footer */
+
+footer {
+    background-color: #435b45;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+
+/* Tablet Responsive */
+
+@media (max-width: 900px) {
+
+    .product-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* Mobile Responsive */
+
+@media (max-width: 600px) {
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav a {
+        margin: 8px;
+    }
+
+    #home h2 {
+        font-size: 30px;
+    }
+
+    .product-container {
+        grid-template-columns: 1fr;
+    }
+
+}
+.whatsapp-float {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background-color: #25D366;
+    color: white;
+    padding: 14px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    transition: 0.3s;
+}
+
+.whatsapp-float:hover {
+    background-color: #128C7E;
+    transform: translateY(-3px);
+}
